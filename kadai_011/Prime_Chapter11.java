@@ -5,8 +5,8 @@ public class Prime_Chapter11 {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		boolean[] primeJudge = new boolean[100];
-			for(int k=0; k < primeJudge.length; k++) {
-				primeJudge[k]=true;
+			for(int suuji=0; suuji < primeJudge.length; suuji++) {
+				primeJudge[suuji]=true;
 			}
 			for(int i = 2; i <= 100; i++) {
 				for (int r = 2; r < i; r++ ) {
