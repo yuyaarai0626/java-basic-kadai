@@ -14,12 +14,15 @@ public class Car_Chapter14 {
 	// メソッド
 	public void gearChange(int afterGear) {
 		System.out.println("ギア" + this.gear + "から" + afterGear + "に切り替えました");
-		int Speed = this.speed * afterGear;
-		if(Speed > 50) {
+		this.speed = this.speed * afterGear;
+	}
+	public void run() {
+		if(this.speed > 50) {
 			System.out.println("速度は時速10kmです");
 		}
-		else if(Speed <= 50) {
-			System.out.println("速度は時速" + Speed + "kmです");
+		else if(this.speed <= 50) {
+			System.out.println("速度は時速" + this.speed + "kmです");
 		}
+	
 	}	
 }
