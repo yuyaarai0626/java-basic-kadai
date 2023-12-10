@@ -2,8 +2,8 @@ package kadai_014;
 
 public class Car_Chapter14 {
 	// フィールド
-	private int gear = 0;
-	private int speed = 0;
+	private int gear = 1;
+	private int speed = 10;
 
 	// コントラクタ
 	public Car_Chapter14(int gear, int speed) {
@@ -14,15 +14,25 @@ public class Car_Chapter14 {
 	// メソッド
 	public void gearChange(int afterGear) {
 		System.out.println("ギア" + this.gear + "から" + afterGear + "に切り替えました");
-		this.speed = this.speed * afterGear;
+		
+		if(afterGear==2) {
+			this.speed=20;
+		}
+		else if(afterGear==3){
+			this.speed=30;
+		}
+		else if(afterGear==4){
+			this.speed=40;
+		}
+		else if(afterGear==5){
+			this.speed=50;
+		}
+		else{
+			this.speed=10;
+		}
 	}
-	public void run() {
-		if(this.speed > 50) {
-			System.out.println("速度は時速10kmです");
-		}
-		else if(this.speed <= 50) {
-			System.out.println("速度は時速" + this.speed + "kmです");
-		}
 	
+	public void run() {
+		System.out.println("速度は時速" + this.speed + "kmです");
 	}	
 }
